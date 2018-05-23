@@ -1,0 +1,200 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16/05/2018, 10:08:28 AM
+    Author     : TECH INSTITUTE PC8
+*/
+@font-face {
+    font-family: 'LaBonita';
+    font-style: normal;
+    font-weight: 400;
+    src:url(../fonts/Anton/Anton-Regular.ttf);
+}
+@font-face {
+    font-family: 'LaFea';
+    font-style: normal;
+    font-weight: 400;
+    src:url(../fonts/Lobster/Lobster-Regular.ttf);
+}
+@font-face {
+    font-family: 'LaHabla';
+    font-style: normal;
+    font-weight: 400;
+    src:url(../fonts/Pacifico/Pacifico-Regular.ttf);
+}
+@font-face {
+    font-family: 'LaChebre';
+    font-style: normal;
+    font-weight: 400;
+    src:url(../fonts/Skranji/Skranji-Bold.ttf);
+}
+
+
+
+
+
+
+
+#container{
+    position: relative;
+    width: 1024px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+#enca,#pie{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background: #0DE2CA;
+}
+
+#enca{
+    border-radius: 10% 10% 0 0;
+    font-family: "LaBonita";
+    text-align: center;
+    font-size: 20px;
+}
+
+#pie{
+    border-radius: 0 0 10% 10%;
+}
+
+#contec{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#menu{
+    position: relative;
+    width: 20%;
+    overflow: hidden;
+    background: #C4E20D;
+    float: left;
+
+}
+
+#contenido{
+    width: 80%;
+    overflow: hidden;
+    background: #C40DE2;
+    float: right;
+}
+
+
+/************/
+
+.btn{
+    width: 90px;
+    height: 30px;
+    margin-top: 10px;
+    text-align: center;
+    list-style-type:none;
+    border-radius: 20%;
+    border:outset ;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    box-shadow: 5px 5px 5px;
+}
+
+.btn-sucess{
+    font-family: 'LaHabla';
+    background: rgba(9,171,120,1);
+    background: -moz-linear-gradient(left, rgba(9,171,120,1) 0%, rgba(12,135,43,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(9,171,120,1)), color-stop(100%, rgba(12,135,43,1)));
+    background: -webkit-linear-gradient(left, rgba(9,171,120,1) 0%, rgba(12,135,43,1) 100%);
+    background: -o-linear-gradient(left, rgba(9,171,120,1) 0%, rgba(12,135,43,1) 100%);
+    background: -ms-linear-gradient(left, rgba(9,171,120,1) 0%, rgba(12,135,43,1) 100%);
+    background: linear-gradient(to right, rgba(9,171,120,1) 0%, rgba(12,135,43,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#09ab78', endColorstr='#0c872b', GradientType=1 );
+}
+
+.btn-warning{
+    font-family: 'LaChebre';
+    background: rgba(240,122,101,1);
+    background: -moz-linear-gradient(left, rgba(240,122,101,1) 0%, rgba(231,56,39,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(240,122,101,1)), color-stop(100%, rgba(231,56,39,1)));
+    background: -webkit-linear-gradient(left, rgba(240,122,101,1) 0%, rgba(231,56,39,1) 100%);
+    background: -o-linear-gradient(left, rgba(240,122,101,1) 0%, rgba(231,56,39,1) 100%);
+    background: -ms-linear-gradient(left, rgba(240,122,101,1) 0%, rgba(231,56,39,1) 100%);
+    background: linear-gradient(to right, rgba(240,122,101,1) 0%, rgba(231,56,39,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f07a65', endColorstr='#e73827', GradientType=1 );
+}
+.btn-sucess:hover{
+    background: rgba(184,214,15,1);
+    background: -moz-linear-gradient(left, rgba(184,214,15,1) 0%, rgba(6,196,16,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(184,214,15,1)), color-stop(100%, rgba(6,196,16,1)));
+    background: -webkit-linear-gradient(left, rgba(184,214,15,1) 0%, rgba(6,196,16,1) 100%);
+    background: -o-linear-gradient(left, rgba(184,214,15,1) 0%, rgba(6,196,16,1) 100%);
+    background: -ms-linear-gradient(left, rgba(184,214,15,1) 0%, rgba(6,196,16,1) 100%);
+    background: linear-gradient(to right, rgba(184,214,15,1) 0%, rgba(6,196,16,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8d60f', endColorstr='#06c410', GradientType=1 );
+}
+
+.btn-warning:hover{
+    background: rgba(239,197,202,1);
+    background: -moz-linear-gradient(left, rgba(239,197,202,1) 0%, rgba(210,75,90,1) 50%, rgba(186,39,55,1) 51%, rgba(241,142,153,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(239,197,202,1)), color-stop(50%, rgba(210,75,90,1)), color-stop(51%, rgba(186,39,55,1)), color-stop(100%, rgba(241,142,153,1)));
+    background: -webkit-linear-gradient(left, rgba(239,197,202,1) 0%, rgba(210,75,90,1) 50%, rgba(186,39,55,1) 51%, rgba(241,142,153,1) 100%);
+    background: -o-linear-gradient(left, rgba(239,197,202,1) 0%, rgba(210,75,90,1) 50%, rgba(186,39,55,1) 51%, rgba(241,142,153,1) 100%);
+    background: -ms-linear-gradient(left, rgba(239,197,202,1) 0%, rgba(210,75,90,1) 50%, rgba(186,39,55,1) 51%, rgba(241,142,153,1) 100%);
+    background: linear-gradient(to right, rgba(239,197,202,1) 0%, rgba(210,75,90,1) 50%, rgba(186,39,55,1) 51%, rgba(241,142,153,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efc5ca', endColorstr='#f18e99', GradientType=1 );
+}
+
+.col12{    position: relative;    width: 100%; overflow: hidden; }
+.col11{    position: relative;    width: 91.67%; overflow: hidden; }
+.col10{    position: relative;    width: 83.33%; overflow: hidden; }
+.col9{    position: relative;    width: 75%; overflow: hidden; }
+.col8{    position: relative;    width: 66.67%; overflow: hidden; }
+.col7{    position: relative;    width: 58.33%; overflow: hidden; }
+.col6{    position: relative;    width: 50%; overflow: hidden; }
+.col5{    position: relative;    width: 41.67%; overflow: hidden; }
+.col4{    position: relative;    width: 33.33%; overflow: hidden; }
+.col3{    position: relative;    width: 25%; overflow: hidden; }
+.col2{    position: relative;    width: 16.67%; overflow: hidden; }
+.col1{    position: relative;     width: 8.33%; overflow: hidden; }
+
+.colLeft{
+    float: left;
+}
+
+.positivo,.negativo{
+    font-size: 18px;
+    padding: 5%;
+    border-radius: 10%;
+    font-weight: bold;
+    font-family: "LaChebre";
+}
+.positivo{
+    background: #9DF3C8;
+    color: #F7398E;
+}
+.negativo{
+    background: #F99393;
+    color: #3885F1; 
+}
+
+.btn-center{
+    text-align: center;
+}
+
+.error{
+    color:orange;
+    font-size: medium;
+    font-family: 'LaHabla';
+    white-space: nowrap;
+}
+
+tbody tr:hover{
+    background: #81BEF7;
+    color: #FE2E64;
+    font-family: 'LaHabla';
+}

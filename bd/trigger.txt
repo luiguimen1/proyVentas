@@ -1,0 +1,28 @@
+******************************************************
+Para explorar la base de datos con consola
+se de utilizar la siguiente linea
+mysqldump -u root -p --default-character-set=utf8 col05 producto> c:/movil/estaSiEs.sql
+******************************************************
+
+
+
+
+******************************************************
+Para crear disparadores
+se pueden hacer a insert - update - delete
+******************************************************
+delimiter//
+create trigger agregar before insert on entrada
+for each row begin
+update producto set cant = cant + new.can where id = new.fkProdId;
+end
+//
+delimiter ;
+
+delimiter //
+create trigger salida before insert on detfactura
+for each row begin
+update producto set cant = cant - new.cant where id = new.fkProdId;
+end
+//
+delimiter ;

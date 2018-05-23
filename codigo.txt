@@ -1,0 +1,52 @@
+ClienteDAO   ->*********************************************************
+
+ public function listaXCC($json) {
+        $ClienteVO = new ClienteVO();
+        $ClienteVO->setCc($json->cedula);
+        $BD = new ConectarBD();
+        $conn = $BD->getMysqli();
+        $sql = "select * from cliente where cc = ?;";
+        $stmp = $conn->prepare($sql);
+        $stmp->bind_param("s", $ClienteVO->getCc());
+        $stmp->execute();
+        $stmp->bind_result($id, $cc, $nom, $dire, $tel, $cor);
+        $res = array();
+        $res["success"] = "no";
+        while ($stmp->fetch()) {
+            $res["id"] = $id;
+            $res["cc"] = $cc;
+            $res["nom"] = $nom;
+            $res["dire"] = $dire;
+            $res["tel"] = $tel;
+            $res["cor"] = $cor;
+            $res["success"] = "ok";
+        }
+        $stmp->close();
+        $conn->close();
+        echo json_encode($res);
+    }
+
+    public function modificar($json) {
+        $ClienteVO = new ClienteVO();
+        $ClienteVO->setId($json->id);
+        $ClienteVO->setCc($json->CC);
+        $ClienteVO->setNombre($json->nombre);
+        $ClienteVO->setDire($json->dir);
+        $ClienteVO->setTel($json->tel);
+        $ClienteVO->setCorreo($json->correo);
+
+        $sql = "update cliente set cc = ?, nombre = ?, dire = ?, tel = ?, correo = ? where id = ?;";
+        $BD = new ConectarBD();
+        $conn = $BD->getMysqli();
+        $smtp = $conn->prepare($sql);
+        $smtp->bind_param("sssssi", $ClienteVO->getCc(), $ClienteVO->getNombre(), $ClienteVO->getDire(), $ClienteVO->getTel(), $ClienteVO->getCorreo(), $ClienteVO->getId());
+        $resp = array();
+        if ($smtp->execute()) {
+            $resp["success"] = "ok";
+        } else {
+            $resp["success"] = "no";
+        }
+        $smtp->close();
+        $conn->close();
+        echo json_encode($resp);
+    }
